@@ -1,13 +1,31 @@
 <fa-app style="width: 100%; height: 100%; position: absolute;">
 
-  <fa-surface fa-background-color="'#2C3E50'" fa-size="[undefined, undefined]">
-  </fa-surface>
+  <trifold pipe-from="events" timeline="t">
 
-  <fa-surface fa-background-color="'#E74C3C'" fa-size="[undefined, undefined]">
-  </fa-surface>
+    <fa-modifier>
+        <fa-surface fa-background-color="'yellow'" fa-size="[230, undefined]" fa-pipe-to="events">
+        </fa-surface>
+    </fa-modifier>
 
-  <fa-surface fa-background-color="'#3498DB'" fa-size="[undefined, undefined]">
-  </fa-surface>
+    <fa-modifier fa-size="[undefined, undefined]">
+      <fa-surface fa-background-color="'red'" fa-pipe-to="events">
+      </fa-surface>
+      <fa-modifier fa-size="[40, 40]" fa-translate="[20, 20]">
+        <fa-surface fa-background-color="'yellow'" fa-click="left()">
+        </fa-surface>
+      </fa-modifier>
+      <fa-modifier fa-size="[40, 40]" fa-origin="[1, 0]" fa-translate="[-20, 20]">
+        <fa-surface fa-background-color="'blue'" fa-click="right()">
+        </fa-surface>
+      </fa-modifier>
+    </fa-modifier>
+
+    <fa-modifier>
+      <fa-surface fa-background-color="'blue'" fa-size="[230, undefined]" fa-pipe-to="events">
+      </fa-surface>
+    </fa-modifier>
+
+  </trifold>
 
 
 </fa-app>
