@@ -1,0 +1,3 @@
+# snap-transition
+
+```grunt serve```
